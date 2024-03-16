@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="home.component.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="home.component.css" rel="stylesheet">
   <title>Portfolio</title>
 </head>
-
 <body>
   <header class="container">
     <div class="page-header">
       <div class="logo">
         <a href="#">Birkan Karaer</a>
       </div>
-      <input type="checkbox" id="click" />
-
+      <input type="checkbox" id="click">
       <label for="click" class="mainicon">
         <div class="menu">
           <i class="bx bx-menu"></i>
@@ -33,7 +28,7 @@
         <li><a href="#" style="--navAni: 5">Contact</a></li>
       </ul>
       <label class="mode">
-        <input type="checkbox" id="darkModeToggle" />
+        <input type="checkbox" id="darkModeToggle">
         <i class="bx bxs-moon"></i>
       </label>
     </div>
@@ -42,59 +37,28 @@
   <section class="container">
     <div class="main">
       <div class="images">
-        <img src="/assets/photo.jpg" alt="" class="img-w" />
+        <img src="/assets/photo.jpg" alt="" class="img-w">
         <span class="bg-effect-1">
           <span class="bg-effect-1"></span>
         </span>
       </div>
       <div class="detail">
         <h3>Hi, I'm</h3>
-        <h1><span style="color: #f9532d">Birkan</span> Karaer</h1>
+        <h1><span style="color: var(--primary-color)">Birkan</span> Karaer</h1>
         <p>
           Hi, I'm Birkan Karaer, a backend developer always eager to explore
           new concepts and technologies.
         </p>
         <div class="social">
-          <a
-            href="https://www.linkedin.com/in/mustafabirkankaraer"
-            style="--socialAni: 1"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/birkankaraer/"
-            style="--socialAni: 2"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a href="https://github.com/birkankaraer" style="--socialAni: 3"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a
-            href="https://medium.com/@karaermustafabirkan"
-            style="--socialAni: 4"
-            ><i class="bx bxl-medium"></i
-          ></a>
+          <a href="https://www.linkedin.com/in/mustafabirkankaraer" style="--socialAni: 1"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.instagram.com/birkankaraer/" style="--socialAni: 2"><i class="bx bxl-instagram"></i></a>
+          <a href="https://github.com/birkankaraer" style="--socialAni: 3"><i class="bx bxl-github"></i></a>
+          <a href="https://medium.com/@karaermustafabirkan" style="--socialAni: 4"><i class="bx bxl-medium"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <script>
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
-    const isDarkMode = localStorage.getItem("darkMode") === "enabled";
-    if (isDarkMode) {
-      body.classList.add("dark-mode");
-      darkModeToggle.checked = true;
-    }
-    darkModeToggle.addEventListener("change", () => {
-      if (darkModeToggle.checked) {
-        body.classList.add("dark-mode");
-        localStorage.setItem("darkMode", "enabled");
-      } else {
-        body.classList.remove("dark-mode");
-        localStorage.setItem("darkMode", "disabled");
-      }
-    });
-  </script>
+  <script src="home.component.js"></script>
 </body>
 </html>
